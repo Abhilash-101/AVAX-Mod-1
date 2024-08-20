@@ -14,7 +14,7 @@ This program is a simple contract written in Solidity, a programming language us
 
 - The `check_require` function takes one `uint` value and requires the input value to be greater than or equal to 0 using `require()` for setting value. If the value is less than zero the function will return the string "Value must be greater than zero". It basically simulates setting up a balance in your account which you can withdraw from using the latter functions.
 - The `check_assert` function takes one `uint` value and checks if the double of it is greater than the set value from previous function. If it is not it returns "No Overflow".
-- The `check_revert` function takes one `uint` value, and checks if it is greater than set value. If it is greater then it returns the string "Not enough funds to withdraw". If is less, then it is deducted from the set value simulating you withdrawing from an account.
+- The `check_revert` function takes one `uint` value, and checks if it is greater than set value. If it is greater then it returns the string "Not enough funds to withdraw". If it is less, then it is deducted from the set value simulating you withdrawing from an account.
 
 ## Getting Started
 
