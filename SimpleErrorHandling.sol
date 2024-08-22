@@ -8,9 +8,10 @@ contract SimpleErrorHandlingContract {
     uint public storedValue;
 
     // Function using require() to check for valid input
-    function check_require(uint _value) public {
+    function check_require(uint _value) public returns (string memory){
         require(_value > 0, "Value must be greater than zero");
         storedValue = _value;
+        return "Balance set to value";
     }
 
     // Function using assert() to verify internal consistency
@@ -21,10 +22,11 @@ contract SimpleErrorHandlingContract {
     }
 
     // Function using revert() to withdraw amount
-    function check_revert (uint _amount) public {
+    function check_revert (uint _amount) public returns (string memory){
         if (_amount > storedValue) {
             revert("Not enough funds to withdraw");
         }
         storedValue -= _amount;
+        return "Balance has been modified after deduction";
     }
 }
