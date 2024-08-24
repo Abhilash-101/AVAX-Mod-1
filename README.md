@@ -12,7 +12,7 @@ Write a smart contract that implements the `require()`, `assert()`, and `revert(
 
 This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has three functions that take input values, check conditions using error handling statements, and execute accordingly.
 
-- The `check_require` function takes one `uint` value and requires the input value to be greater than or equal to 0 using `require()` for setting value. If the value is less than zero the function will return the string "Value must be greater than zero". It basically simulates setting up a balance in your account which you can withdraw from using the latter functions.
+- The `check_require` function takes one `uint` value and requires the input value to be greater than or equal to 0 using `require()` for setting value. If the value is less than or equal to zero the function will return the string "Value must be greater than zero". It basically simulates setting up a balance in your account which you can withdraw from using the latter functions.
 - The `check_assert` checks that the operation of doubling the value from the previous function didn’t result in overflow. If something went wrong internally, the contract would stop execution. 
 - The `check_revert` function takes one `uint` value, and checks if it is greater than set value. If it is greater then it returns the string "Not enough funds to withdraw". If it is less, then it is deducted from the set value simulating you withdrawing from an account.
 
